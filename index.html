@@ -1,0 +1,163 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>OurStory AI | Love, Beautifully Told</title>
+<style>
+*{box-sizing:border-box}
+body{margin:0;font-family:Georgia,serif;background:#fff9f7;color:#34252d}
+header{padding:22px;text-align:center;background:#fff}
+.logo{font-size:29px;color:#a84465;font-weight:bold}
+nav{margin-top:12px;font:13px Arial,sans-serif}
+nav a{margin:0 9px;color:#674757;text-decoration:none}
+.hero{text-align:center;padding:75px 22px;background:linear-gradient(145deg,#fff1f0,#f5dce6)}
+.tag{letter-spacing:3px;color:#a84465;font:12px Arial}
+h1{font-size:clamp(38px,8vw,66px);line-height:1.12;margin:20px auto;max-width:750px}
+h2{font-size:34px}
+p{line-height:1.7}
+.hero p{max-width:550px;margin:20px auto}
+.btn{display:inline-block;background:#a84465;color:white;border:0;border-radius:30px;padding:16px 30px;font-weight:bold;cursor:pointer;text-decoration:none}
+section{padding:55px 20px;text-align:center}
+.container{max-width:1000px;margin:auto}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:20px;margin-top:35px}
+.card{background:white;border:1px solid #f0dce2;border-radius:20px;padding:28px;box-shadow:0 8px 25px #40202b0b}
+.card h3{color:#a84465}
+.price{font-size:32px;font-weight:bold;color:#34252d}
+form{max-width:580px;margin:30px auto;text-align:left;background:white;padding:28px;border-radius:20px}
+label{display:block;margin:16px 0 7px;font:14px Arial;font-weight:bold}
+input,textarea,select{width:100%;padding:14px;border:1px solid #e6ccd4;border-radius:10px;font:15px Arial}
+textarea{min-height:110px}
+.result{white-space:pre-wrap;text-align:left;background:#fff1f3;border-radius:15px;padding:25px;margin-top:20px;line-height:1.8}
+footer{padding:35px;text-align:center;background:#34252d;color:white;font:13px Arial}
+.small{font:13px Arial;color:#816775}
+</style>
+</head>
+<body>
+<header>
+<div class="logo">OurStory AI ♡</div>
+<nav>
+<a href="#how">How It Works</a>
+<a href="#create">Create</a>
+<a href="#pricing">Pricing</a>
+</nav>
+</header>
+
+<div class="hero">
+<div class="tag">PERSONALIZED ROMANTIC GIFTS</div>
+<h1>Every Love Story Deserves to Be Remembered.</h1>
+<p>Turn your favorite memories into a beautiful love letter and a one-of-a-kind digital gift.</p>
+<a class="btn" href="#create">Create Your Love Story ♡</a>
+<p class="small">Made with love. Personalized by you.</p>
+</div>
+
+<section id="how">
+<div class="container">
+<h2>Your Love, Beautifully Told</h2>
+<div class="cards">
+<div class="card">
+<h3>01 · Share</h3>
+<p>Tell us about your special person and your favorite memories together.</p>
+</div>
+<div class="card">
+<h3>02 · Create</h3>
+<p>Transform your feelings into a meaningful, personalized romantic message.</p>
+</div>
+<div class="card">
+<h3>03 · Gift</h3>
+<p>Surprise someone with words they will remember forever.</p>
+</div>
+</div>
+</div>
+</section>
+
+<section id="create" style="background:#fdf0f2">
+<div class="container">
+<h2>Create a Love Letter</h2>
+<p>Start with a complimentary romantic preview.</p>
+<form id="loveForm">
+<label>Your name</label>
+<input id="sender" placeholder="Your name" required maxlength="60">
+<label>Your loved one's name</label>
+<input id="receiver" placeholder="Their name" required maxlength="60">
+<label>What makes your story special?</label>
+<textarea id="memory" placeholder="Share a favorite moment, a beautiful memory, or what you love about them..." required maxlength="1000"></textarea>
+<label>Choose your tone</label>
+<select id="tone">
+<option value="romantic">Deeply Romantic</option>
+<option value="sweet">Sweet & Tender</option>
+<option value="poetic">Poetic & Dreamy</option>
+</select>
+<button class="btn" type="submit" style="margin-top:22px;width:100%">Create My Preview ♡</button>
+<div id="result" class="result" hidden></div>
+</form>
+<p class="small">Your preview is created in your browser. No information is submitted to a server.</p>
+</div>
+</section>
+
+<section id="pricing">
+<div class="container">
+<h2>A Gift for Every Love Story</h2>
+<div class="cards">
+<div class="card">
+<h3>Love Letter</h3>
+<div class="price">€4.90</div>
+<p>A personalized romantic letter, beautifully presented.</p>
+<a class="btn" href="#create">Try Preview</a>
+</div>
+<div class="card">
+<h3>Our Story</h3>
+<div class="price">€9.90</div>
+<p>A love letter and a digital story experience for two.</p>
+<a class="btn" href="#create">Try Preview</a>
+</div>
+<div class="card">
+<h3>Forever Collection</h3>
+<div class="price">€24.90</div>
+<p>A premium romantic gift experience with memories and storytelling.</p>
+<a class="btn" href="#create">Try Preview</a>
+</div>
+</div>
+<p class="small">Packages are coming soon. Payments are not enabled yet.</p>
+</div>
+</section>
+
+<footer>
+<div>OurStory AI ♡</div>
+<p>Because your story is worth telling.</p>
+<p>© 2026 OurStory AI. All rights reserved.</p>
+</footer>
+
+<script>
+document.getElementById("loveForm").addEventListener("submit",function(e){
+e.preventDefault();
+const sender=document.getElementById("sender").value.trim();
+const receiver=document.getElementById("receiver").value.trim();
+const memory=document.getElementById("memory").value.trim();
+const tone=document.getElementById("tone").value;
+let opening="Every moment with you reminds me how beautiful love can be.";
+if(tone==="sweet")opening="You make even the simplest days feel special.";
+if(tone==="poetic")opening="Somewhere between ordinary moments, our story became extraordinary.";
+const letter=`Dear ${receiver},
+
+${opening}
+
+When I think about us, one memory always makes me smile:
+
+${memory}
+
+Our story is made of little moments that mean more than words can say. I am grateful for the memories we have created and excited for all the chapters still waiting to be written.
+
+With all my love,
+${sender}
+
+♡ OurStory AI Preview`;
+const result=document.getElementById("result");
+result.textContent=letter;
+result.hidden=false;
+result.scrollIntoView({behavior:"smooth",block:"center"});
+});
+</script>
+</body>
+</html>
