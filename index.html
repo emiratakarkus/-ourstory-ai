@@ -130,7 +130,7 @@ footer{padding:35px;text-align:center;background:#34252d;color:white;font:13px A
 </footer>
 
 <script>
-document.getElementById("loveForm").addEventListener("submit",function(e){
+document.getElementById("loveForm").addEventListener("submit", function(e) {
 e.preventDefault();
 const sender=document.getElementById("sender").value.trim();
 const receiver=document.getElementById("receiver").value.trim();
@@ -152,12 +152,7 @@ Our story is made of little moments that mean more than words can say. I am grat
 
 With all my love,
 ${sender}`;
-const result = document.getElementById("result");
-result.textContent = letter;
-result.hidden = false;
-result.style.display = "block";
-});
-</script>
+
 </body>
 </html>
 
